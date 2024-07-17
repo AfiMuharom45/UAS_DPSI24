@@ -12,10 +12,10 @@ router.get('/:id', protect, transactionController.getTransactionById);
 // POST add a new transaction
 router.post('/', protect, transactionController.addTransaction);
 
-// PUT update transaction by id
+// PUT update transaction by id for admin
 router.put('/:id', protect, admin, transactionController.updateTransaction);
 
-// DELETE remove transaction by id
+// DELETE remove transaction by id fro admin 
 router.delete('/:id', protect, admin, transactionController.deleteTransaction);
 
 module.exports = router;
