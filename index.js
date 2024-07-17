@@ -15,6 +15,11 @@ const connectDB = require('./config/db')
 // Database connection
 connectDB();
 
+// Root route
+app.get('/', (req, res) => {
+    res.send('API is running...');
+});
+
 // Import routes
 const bookRoutes = require('./routes/bookRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
